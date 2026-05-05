@@ -7,6 +7,8 @@ public class Constant {
     public static String BOOK_LIST_IS_EMPTY = "Book list is empty";
     public static String BOOK_DELETE_SUCCESSFULLY = "Book has been deleted";
     public static String BOOK_UPDATE_SUCCESSFULLY = "Book has been updated";
+    public static String MAGAZINE_ADDED_SUCCESSFULLY = "magazine has been added";
+
 
 
 

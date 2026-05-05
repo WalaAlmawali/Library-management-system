@@ -2,6 +2,7 @@ package Serveces;
 
 import Entity.Book;
 import Entity.Magazine;
+import Utils.Constant;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +35,23 @@ public class MagazineService {
         magazine.setStatus(false);
 
         return magazine;
+    }
+
+    public List<Magazine> AddNewMagazines(){
+
+        Boolean continueFlag = true;
+        while (continueFlag) {
+
+            magazineList.add(AddNewMagazine());
+            System.out.println(Constant.MAGAZINE_ADDED_SUCCESSFULLY);
+
+            System.out.println(Constant.INPUT_EXIT_CONTINUE_MESSAGE_BOOK);
+            if (scanner.nextLine().equalsIgnoreCase("q")) {
+                continueFlag = false;
+            }
+        }
+        return magazineList;
+
     }
 
 
