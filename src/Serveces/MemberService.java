@@ -141,7 +141,17 @@ public class MemberService {
 
     }
 
+    public void ReturningBook(int bookID){
 
+        for(Book book : bookService.bookList){
+
+            if(book.getId() == bookID ){
+                book.setStatus(false);
+            }
+
+        }
+
+    }
 
 
     public Boolean handleMemberMenu(Integer memberOption) {
@@ -176,7 +186,8 @@ public class MemberService {
 
 
             }case 6->{
-
+                System.out.println("Enter Book ID to Returning it");
+                ReturningBook(scanner.nextInt());
 
             }
             case 7 -> {
