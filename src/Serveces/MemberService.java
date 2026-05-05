@@ -81,6 +81,19 @@ public class MemberService {
 
     }
 
+    public void DeleteMember(int memberID){
+
+        if(!memberList.isEmpty()){
+
+            memberList.removeIf(b -> b.getId() == memberID);
+            System.out.println(Constant.MEMBER_DELETE_SUCCESSFULLY);
+
+        }else {
+            System.out.println(Constant.MEMBER_LIST_IS_EMPTY);
+        }
+
+    }
+
 
 
 
@@ -102,6 +115,7 @@ public class MemberService {
             }
             case 3 -> {
                 System.out.println("Enter Member ID to delete the Member");
+                DeleteMember(scanner.nextInt());
 
             }
 
