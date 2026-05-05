@@ -69,7 +69,9 @@ public class BookService {
 
     public void UpdateBook(int bookID){
 
-        for(Book book: bookList){
+        if(!bookList.isEmpty()){
+
+            for(Book book: bookList){
 
             if(book.getId() == bookID){
 
@@ -86,6 +88,9 @@ public class BookService {
             }
         }
 
+    }else {
+            System.out.println(Constant.BOOK_LIST_IS_EMPTY);
+        }
     }
 
     public void DisplayBook(int bookID){
