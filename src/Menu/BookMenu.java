@@ -1,7 +1,6 @@
 package Menu;
 
-public class Menu implements MenuInterface {
-
+public class BookMenu implements MenuInterface{
     @Override
     public void displayMenu() {
 
