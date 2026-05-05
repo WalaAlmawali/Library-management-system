@@ -29,7 +29,9 @@ public class MenuMessages {
             2- Show Member Details
             3- Delete Member
             4- Update Member
-            5- Go Back to Main Menu
+            5- Borrowing Book
+            6- Returning Book
+            7- Go Back to Main Menu
             """;
     public static String Library_MENU_MESSAGE = """
             1- Display All Books

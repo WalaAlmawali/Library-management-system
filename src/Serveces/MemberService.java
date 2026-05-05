@@ -1,7 +1,7 @@
 package Serveces;
 
+
 import Entity.Book;
-import Entity.Magazine;
 import Entity.Member;
 import Entity.MemberAddress;
 import Utils.Constant;
@@ -15,6 +15,7 @@ public class MemberService {
     int idCount = 1;
     List<Member> memberList = new ArrayList<>();
     Scanner scanner = new Scanner(System.in);
+    BookService bookService = new BookService();
 
     public Member AddNewMember(){
 
@@ -128,6 +129,18 @@ public class MemberService {
 
     }
 
+    public void BorrowingBook(int bookID){
+
+        for(Book book : bookService.bookList){
+
+            if(book.getId() == bookID ){
+                book.setStatus(true);
+            }
+
+        }
+
+    }
+
 
 
 
@@ -157,8 +170,16 @@ public class MemberService {
                 System.out.println("Enter Member ID to update the Member");
                 UpdateMember(scanner.nextInt());
 
+            }case 5->{
+                System.out.println("Enter Book ID to Borrowing it");
+                BorrowingBook(scanner.nextInt());
+
+
+            }case 6->{
+
+
             }
-            case 5 -> {
+            case 7 -> {
                 return false;
             }
         }
