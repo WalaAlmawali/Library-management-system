@@ -1,8 +1,21 @@
 package Serveces;
 
+import Entity.Library;
+
 import java.util.Scanner;
+import java.util.UUID;
 
 public class LibraryService {
+
+    public static Library libraryInit() {
+
+        Library library = new Library();
+        library.setName("Al-Nebras Library");
+        library.setAddress("Muscat");
+
+        return library;
+
+    }
 
     public Boolean handleLibraryMenu(Integer libraryOption) {
 
@@ -19,7 +32,6 @@ public class LibraryService {
             }
             case 3 -> {
                 System.out.println(" All Members in Library :");
-
             }
 
             case 4 -> {
@@ -31,8 +43,10 @@ public class LibraryService {
             }case 6->{
                 System.out.println("Search For Member");
 
+            }case 7 ->{
+                System.out.println("Show Library Information");
             }
-            case 7 -> {
+            case 8 -> {
                 return false;
             }
         }

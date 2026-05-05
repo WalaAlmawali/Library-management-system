@@ -8,7 +8,17 @@ public class Library {
     private List<Book> bookList ;
     private List<Magazine> magazinList;
     private List<Member> memberList;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     private String address;
+    private  String name;
 
     public List<Book> getBookList() {
         return bookList;
