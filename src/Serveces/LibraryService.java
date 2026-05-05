@@ -14,8 +14,15 @@ public class LibraryService {
         library.setAddress("Muscat");
 
         return library;
+    }
+
+    public void displayLibrary(){
+
+        System.out.println("Library name : " + libraryInit().getName());
+        System.out.println("Library address : " + libraryInit().getAddress());
 
     }
+
 
     public Boolean handleLibraryMenu(Integer libraryOption) {
 
@@ -45,6 +52,8 @@ public class LibraryService {
 
             }case 7 ->{
                 System.out.println("Show Library Information");
+                displayLibrary();
+
             }
             case 8 -> {
                 return false;
