@@ -55,6 +55,17 @@ public class LibraryService {
 
     }
 
+    public void FindBook(String str){
+        for(Book book : bookService.bookList ){
+           if(book.getTitle().contains(str)){
+
+               bookService.DisplayBook(book.getId());
+           }
+        }
+
+
+    }
+
 
 
 
@@ -81,7 +92,8 @@ public class LibraryService {
             }
 
             case 4 -> {
-                System.out.println("Search For Book");
+                System.out.println("Enter word that may in book title");
+                FindBook(scanner.nextLine());
 
             }case 5 -> {
                 System.out.println("Search For Magazine");
