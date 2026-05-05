@@ -54,6 +54,28 @@ public class MagazineService {
 
     }
 
+    public void DisplayMagazine(int bookID){
+
+        if(magazineList.isEmpty()){
+            System.out.println(Constant.MAGAZINE_LIST_IS_EMPTY);
+        }
+
+        for(Magazine magazine : magazineList){
+
+            if(magazine.getId() == bookID){
+
+                System.out.println("magazine ID : " + magazine.getId());
+                System.out.println("magazine title : " + magazine.getTitle());
+                System.out.println("magazine statue : " + magazine.isStatus());
+                System.out.println("magazine author : " + magazine.getAuthor());
+                System.out.println("magazine version : " + magazine.getVersion());
+
+            }
+        }
+
+
+    }
+
 
     public Boolean handleMagazineMenu(Integer magazineOption) {
 
@@ -62,6 +84,7 @@ public class MagazineService {
         switch (magazineOption) {
             case 1 -> {
                 System.out.println("Add new Magazine ");
+                AddNewMagazines();
 
             }
             case 2 -> {
