@@ -1,11 +1,15 @@
 package Serveces;
 
+import Entity.Book;
 import Entity.Library;
 
+import java.util.List;
 import java.util.Scanner;
 
 
 public class LibraryService {
+
+    BookService bookService = new BookService();
 
     public static Library libraryInit() {
 
@@ -23,6 +27,14 @@ public class LibraryService {
 
     }
 
+    public void DisplayBooks(){
+
+        for(Book book : bookService.bookList ){
+           bookService.DisplayBook(book.getId());
+        }
+
+    }
+
 
 
 
@@ -33,6 +45,7 @@ public class LibraryService {
         switch (libraryOption) {
             case 1 -> {
                 System.out.println("All Book in Library : ");
+                DisplayBooks();
 
             }
             case 2 -> {
