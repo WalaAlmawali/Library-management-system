@@ -2,6 +2,7 @@ import Menu.Menu;
 import Serveces.BookService;
 import Serveces.LibraryService;
 import Serveces.MagazineService;
+import Serveces.MemberService;
 import Utils.MenuMessages;
 
 import java.util.Scanner;
@@ -16,6 +17,7 @@ public class MainApp {
         LibraryService libraryService = new LibraryService();
         BookService bookService = new BookService();
         MagazineService magazineService = new MagazineService();
+        MemberService memberService = new MemberService();
 
 
         Boolean mainMenuContinue = true;
@@ -47,6 +49,14 @@ public class MainApp {
                         System.out.println(MenuMessages.Magazine_MENU_MESSAGE);
                         Integer magazineOption = input.nextInt();
                         MagazineMenuContinue = magazineService.handleMagazineMenu(magazineOption);
+                    }
+                }case 4 ->{
+                    Boolean MemberMenuContinue = true;
+                    while (MemberMenuContinue) {
+                        System.out.println(" *********** Member Menu ***********");
+                        System.out.println(MenuMessages.Member_MENU_MESSAGE);
+                        Integer memberOption = input.nextInt();
+                        MemberMenuContinue = memberService.handleMemberMenu(memberOption);
                     }
                 }
                 case 5 -> {
