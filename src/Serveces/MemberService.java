@@ -3,6 +3,7 @@ package Serveces;
 import Entity.Magazine;
 import Entity.Member;
 import Entity.MemberAddress;
+import Utils.Constant;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,6 +40,23 @@ public class MemberService {
 
 
         return member;
+    }
+
+    public List<Member> AddNewMembers(){
+
+        Boolean continueFlag = true;
+        while (continueFlag) {
+
+            memberList.add(AddNewMember());
+            System.out.println(Constant.Member_ADDED_SUCCESSFULLY);
+
+            System.out.println(Constant.INPUT_EXIT_CONTINUE_MESSAGE_BOOK);
+            if (scanner.nextLine().equalsIgnoreCase("q")) {
+                continueFlag = false;
+            }
+        }
+        return memberList;
+
     }
 
 
