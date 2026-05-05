@@ -89,7 +89,7 @@ public class MagazineService {
             }
             case 2 -> {
                 System.out.println("Enter Magazine ID to show the Magazine details");
-
+                DisplayMagazine(scanner.nextInt());
 
             }
             case 3 -> {
