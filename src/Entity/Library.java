@@ -6,7 +6,7 @@ import java.util.List;
 public class Library {
 
     private List<Book> bookList ;
-    private List<Magazin> magazinList;
+    private List<Magazine> magazinList;
     private List<Member> memberList;
     private String address;
 
@@ -18,11 +18,11 @@ public class Library {
         this.bookList = bookList;
     }
 
-    public List<Magazin> getMagazinList() {
+    public List<Magazine> getMagazineList() {
         return magazinList;
     }
 
-    public void setMagazinList(List<Magazin> magazinList) {
+    public void setMagazineList(List<Magazine> magazinList) {
         this.magazinList = magazinList;
     }
 
