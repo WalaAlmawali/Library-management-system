@@ -63,6 +63,15 @@ public class LibraryService {
            }
         }
 
+    }
+
+    public void FindMagazine(String str){
+        for(Magazine magazine : magazineService.magazineList ){
+            if(magazine.getTitle().contains(str)){
+
+                magazineService.DisplayMagazine(magazine.getId());
+            }
+        }
 
     }
 
@@ -97,6 +106,7 @@ public class LibraryService {
 
             }case 5 -> {
                 System.out.println("Search For Magazine");
+                FindMagazine(scanner.nextLine());
 
             }case 6->{
                 System.out.println("Search For Member");
