@@ -1,8 +1,18 @@
 package Serveces;
 
+import Entity.Book;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class MagazineService {
+
+    int idCount = 1;
+
+    List<Book> bookList = new ArrayList<>();
+
+    Scanner scanner = new Scanner(System.in);
 
 
     public Boolean handleMagazineMenu(Integer magazineOption) {
