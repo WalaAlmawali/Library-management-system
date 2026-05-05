@@ -1,6 +1,7 @@
 package Serveces;
 
 import Entity.Book;
+import Entity.Magazine;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,10 +10,31 @@ import java.util.Scanner;
 public class MagazineService {
 
     int idCount = 1;
-
-    List<Book> bookList = new ArrayList<>();
+    List<Magazine> magazineList = new ArrayList<>();
 
     Scanner scanner = new Scanner(System.in);
+
+
+    public Magazine AddNewMagazine(){
+
+       Magazine magazine = new Magazine();
+
+        magazine.setId(idCount);
+        idCount++;
+
+        System.out.println("Enter Magazine Title");
+        magazine.setTitle(scanner.nextLine());
+
+        System.out.println("Enter Magazine Author");
+        magazine.setAuthor(scanner.nextLine());
+
+        System.out.println("Enter Magazine version");
+        magazine.setVersion(scanner.nextLine());
+
+        magazine.setStatus(false);
+
+        return magazine;
+    }
 
 
     public Boolean handleMagazineMenu(Integer magazineOption) {
