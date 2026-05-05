@@ -2,6 +2,7 @@ package Serveces;
 
 import Entity.Book;
 import Entity.Library;
+import Entity.Magazine;
 
 import java.util.List;
 import java.util.Scanner;
@@ -10,6 +11,7 @@ import java.util.Scanner;
 public class LibraryService {
 
     BookService bookService = new BookService();
+    MagazineService magazineService = new MagazineService();
 
     public static Library libraryInit() {
 
@@ -35,6 +37,14 @@ public class LibraryService {
 
     }
 
+    public void DisplayMagazines(){
+
+        for(Magazine magazine : magazineService.magazineList){
+            magazineService.DisplayMagazine(magazine.getId());
+        }
+
+    }
+
 
 
 
@@ -50,6 +60,7 @@ public class LibraryService {
             }
             case 2 -> {
                 System.out.println("All Magazine in Library :");
+                DisplayMagazines();
 
             }
             case 3 -> {
