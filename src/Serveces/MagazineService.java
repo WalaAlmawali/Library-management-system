@@ -54,7 +54,7 @@ public class MagazineService {
 
     }
 
-    public void DisplayMagazine(int bookID){
+    public void DisplayMagazine(int magazineID){
 
         if(magazineList.isEmpty()){
             System.out.println(Constant.MAGAZINE_LIST_IS_EMPTY);
@@ -62,7 +62,7 @@ public class MagazineService {
 
         for(Magazine magazine : magazineList){
 
-            if(magazine.getId() == bookID){
+            if(magazine.getId() == magazineID){
 
                 System.out.println("magazine ID : " + magazine.getId());
                 System.out.println("magazine title : " + magazine.getTitle());
@@ -73,6 +73,19 @@ public class MagazineService {
             }
         }
 
+
+    }
+
+    public void DeleteMagazine(int magazineID){
+
+        if(!magazineList.isEmpty()){
+
+            magazineList.removeIf(b -> b.getId() == magazineID);
+            System.out.println(Constant.MAGAZINE_DELETE_SUCCESSFULLY);
+
+        }else {
+            System.out.println(Constant.MAGAZINE_LIST_IS_EMPTY);
+        }
 
     }
 
