@@ -38,6 +38,7 @@ public class MenuMessages {
             4- Search For Book
             5- Search For Magazine
             6- Search For Member
+            7- Go Back to Main Menu
             """;
 
 }
