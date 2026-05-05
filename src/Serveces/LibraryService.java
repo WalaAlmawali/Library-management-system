@@ -75,6 +75,16 @@ public class LibraryService {
 
     }
 
+    public void FindMember(String name){
+        for(Member member : memberService.memberList){
+            if(member.getName().contains(name)){
+
+                memberService.DisplayMember(member.getId());
+            }
+        }
+
+    }
+
 
 
 
@@ -110,6 +120,7 @@ public class LibraryService {
 
             }case 6->{
                 System.out.println("Search For Member");
+                FindMember(scanner.nextLine());
 
             }case 7 ->{
                 System.out.println("Show Library Information");
