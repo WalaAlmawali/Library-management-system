@@ -1,5 +1,6 @@
 package Serveces;
 
+import Entity.Book;
 import Entity.Magazine;
 import Entity.Member;
 import Entity.MemberAddress;
@@ -37,6 +38,8 @@ public class MemberService {
         String postalCode = scanner.nextLine();
 
         MemberAddress memberAddress = new MemberAddress(street,city,postalCode);
+        member.setAddress(memberAddress);
+
 
 
         return member;
@@ -59,6 +62,25 @@ public class MemberService {
 
     }
 
+    public void DisplayMember(int memberID){
+
+        if(memberList.isEmpty()){
+            System.out.println(Constant.MEMBER_LIST_IS_EMPTY);
+        }
+
+        for(Member member : memberList){
+
+            if(member.getId() == memberID){
+
+                System.out.println("Member ID : " + member.getId());
+                System.out.println("Member name : " + member.getName());
+                System.out.println("Member address : " + member.getAddress().getFormattedAddress());
+
+            }
+        }
+
+    }
+
 
 
 
@@ -69,11 +91,12 @@ public class MemberService {
         switch (memberOption) {
             case 1 -> {
                 System.out.println("Add new Member ");
-
+                AddNewMembers();
 
             }
             case 2 -> {
                 System.out.println("Enter Member ID to show the Member information");
+                DisplayMember(scanner.nextInt());
 
 
             }
