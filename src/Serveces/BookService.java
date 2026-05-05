@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class BookService {
-
     Scanner scanner = new Scanner(System.in);
 
     public Book AddNewBook(){
@@ -43,6 +42,11 @@ public class BookService {
             }
         }
         return bookList;
+
+    }
+
+    public void DisplayBook(int bookID){
+
 
     }
 
