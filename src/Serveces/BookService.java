@@ -8,18 +8,28 @@ import java.util.List;
 import java.util.Scanner;
 
 public class BookService {
+
+    int idCount = 1;
+
+    List<Book> bookList = new ArrayList<>();
+
     Scanner scanner = new Scanner(System.in);
 
     public Book AddNewBook(){
 
-        int idCount = 0;
-
         Book book = new Book();
 
-        book.setId(idCount++);
+        book.setId(idCount);
+        idCount++;
 
         System.out.println("Enter Book Title");
         book.setTitle(scanner.nextLine());
+
+        System.out.println("Enter Book Author");
+        book.setAuthor(scanner.nextLine());
+
+        System.out.println("Enter Book version");
+        book.setVersion(scanner.nextLine());
 
         book.setStatus(false);
 
@@ -28,7 +38,6 @@ public class BookService {
 
     public List<Book> AddNewBooks(){
 
-        List<Book> bookList = new ArrayList<>();
 
         Boolean continueFlag = true;
         while (continueFlag) {
@@ -47,6 +56,24 @@ public class BookService {
 
     public void DisplayBook(int bookID){
 
+        if(bookList.isEmpty()){
+            System.out.println("book list is empty");
+        }
+
+        for(Book book : bookList){
+
+            if(book.getId() == bookID){
+
+                System.out.println("Book ID : " + book.getId());
+                System.out.println("Book title : " + book.getTitle());
+                System.out.println("Book statue : " + book.isStatus());
+                System.out.println("Book author : " + book.getAuthor());
+                System.out.println("Book version : " + book.getVersion());
+
+
+            }
+        }
+
 
     }
 
@@ -62,7 +89,8 @@ public class BookService {
 
             }
             case 2 -> {
-                System.out.println("Show a Book");
+                System.out.println("Enter Book ID to show the Book details");
+                DisplayBook(scanner.nextInt());
 
             }
             case 3 -> {
