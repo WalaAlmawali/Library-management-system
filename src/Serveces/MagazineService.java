@@ -89,6 +89,32 @@ public class MagazineService {
 
     }
 
+    public void UpdateMagazine(int magazineID){
+
+        if(!magazineList.isEmpty()){
+
+            for(Magazine magazine: magazineList){
+
+                if(magazine.getId() == magazineID){
+
+                    System.out.println("Enter updated Magazine Title");
+                    magazine.setTitle(scanner.nextLine());
+
+                    System.out.println("Enter updated Magazine Author");
+                    magazine.setAuthor(scanner.nextLine());
+
+                    System.out.println("Enter updated Magazine version");
+                    magazine.setVersion(scanner.nextLine());
+
+                    System.out.println(Constant.BOOK_UPDATE_SUCCESSFULLY);
+                }
+            }
+
+        }else {
+            System.out.println(Constant.MAGAZINE_LIST_IS_EMPTY);
+        }
+    }
+
 
     public Boolean handleMagazineMenu(Integer magazineOption) {
 
