@@ -1,8 +1,20 @@
 package Serveces;
 
+import Entity.Magazine;
+import Entity.Member;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class MemberService {
+
+    int idCount = 1;
+    List<Member> memberList = new ArrayList<>();
+    Scanner scanner = new Scanner(System.in);
+
+
+
 
     public Boolean handleMemberMenu(Integer memberOption) {
 
