@@ -56,16 +56,21 @@ public class BookService {
 
     public void DeleteBook(int bookID){
 
+        if(!bookList.isEmpty()){
 
+            bookList.removeIf(b -> b.getId() == bookID);
+            System.out.println(Constant.BOOK_DELETE_SUCCESSFULLY);
 
-
+        }else {
+            System.out.println(Constant.BOOK_LIST_IS_EMPTY);
+        }
 
     }
 
     public void DisplayBook(int bookID){
 
         if(bookList.isEmpty()){
-            System.out.println("book list is empty");
+            System.out.println(Constant.BOOK_LIST_IS_EMPTY);
         }
 
         for(Book book : bookList){
@@ -102,7 +107,8 @@ public class BookService {
 
             }
             case 3 -> {
-                System.out.println("Delete a Book");
+                System.out.println("Enter Book ID to delete the Book");
+                DeleteBook(scanner.nextInt());
 
             }
 
