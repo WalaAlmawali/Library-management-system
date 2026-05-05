@@ -54,6 +54,14 @@ public class BookService {
 
     }
 
+    public void DeleteBook(int bookID){
+
+
+
+
+
+    }
+
     public void DisplayBook(int bookID){
 
         if(bookList.isEmpty()){
