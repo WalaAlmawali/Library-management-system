@@ -107,7 +107,7 @@ public class MagazineService {
             }
             case 3 -> {
                 System.out.println("Enter Magazine ID to delete the Magazine");
-
+                DeleteMagazine(scanner.nextInt());
 
             }
 
