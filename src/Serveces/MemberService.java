@@ -2,6 +2,7 @@ package Serveces;
 
 import Entity.Magazine;
 import Entity.Member;
+import Entity.MemberAddress;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +13,33 @@ public class MemberService {
     int idCount = 1;
     List<Member> memberList = new ArrayList<>();
     Scanner scanner = new Scanner(System.in);
+
+    public Member AddNewMember(){
+
+        Member member = new Member();
+
+        member.setId(idCount);
+        idCount++;
+
+        System.out.println("Enter Member name");
+        member.setName(scanner.nextLine());
+
+        System.out.println("Enter Member Address : ");
+
+        System.out.println("Enter Street");
+        String street = scanner.nextLine();
+
+        System.out.println("Enter City");
+        String city = scanner.nextLine();
+
+        System.out.println("Enter Postal Code");
+        String postalCode = scanner.nextLine();
+
+        MemberAddress memberAddress = new MemberAddress(street,city,postalCode);
+
+
+        return member;
+    }
 
 
 
