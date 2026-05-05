@@ -69,6 +69,22 @@ public class BookService {
 
     public void UpdateBook(int bookID){
 
+        for(Book book: bookList){
+
+            if(book.getId() == bookID){
+
+                System.out.println("Enter Updated Book Title");
+                book.setTitle(scanner.nextLine());
+
+                System.out.println("Enter Updated Book Author");
+                book.setAuthor(scanner.nextLine());
+
+                System.out.println("Enter Updated Book version");
+                book.setVersion(scanner.nextLine());
+
+                System.out.println(Constant.BOOK_UPDATE_SUCCESSFULLY);
+            }
+        }
 
     }
 
@@ -118,7 +134,8 @@ public class BookService {
             }
 
             case 4 -> {
-                System.out.println("Update a Book");
+                System.out.println("Enter Book ID to update the Book");
+                UpdateBook(scanner.nextInt());
 
             }
             case 5 -> {
