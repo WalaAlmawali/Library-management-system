@@ -81,6 +81,40 @@ public class MemberService {
 
     }
 
+    public void UpdateMember(int memberID){
+
+        if(!memberList.isEmpty()){
+
+            for(Member member: memberList){
+
+                if(member.getId() == memberID){
+
+                    System.out.println("Enter updated Member name");
+                    member.setName(scanner.nextLine());
+
+                    System.out.println("Enter updated Member Address : ");
+
+                    System.out.println("Enter updated Street");
+                    String street = scanner.nextLine();
+
+                    System.out.println("Enter updated City");
+                    String city = scanner.nextLine();
+
+                    System.out.println("Enter updated Postal Code");
+                    String postalCode = scanner.nextLine();
+
+                    MemberAddress memberAddress = new MemberAddress(street,city,postalCode);
+                    member.setAddress(memberAddress);
+
+                    System.out.println(Constant.MEMBER_UPDATE_SUCCESSFULLY);
+                }
+            }
+
+        }else {
+            System.out.println(Constant.MEMBER_LIST_IS_EMPTY);
+        }
+    }
+
     public void DeleteMember(int memberID){
 
         if(!memberList.isEmpty()){
@@ -121,6 +155,7 @@ public class MemberService {
 
             case 4 -> {
                 System.out.println("Enter Member ID to update the Member");
+                UpdateMember(scanner.nextInt());
 
             }
             case 5 -> {

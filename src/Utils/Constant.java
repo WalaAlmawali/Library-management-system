@@ -13,6 +13,8 @@ public class Constant {
     public static String Member_ADDED_SUCCESSFULLY = "Member has been added";
     public static String MEMBER_LIST_IS_EMPTY = "Member list is empty";
     public static String MEMBER_DELETE_SUCCESSFULLY = "Member has been deleted";
+    public static String MEMBER_UPDATE_SUCCESSFULLY = "Member has been updated";
+
 
 
 

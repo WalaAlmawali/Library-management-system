@@ -89,6 +89,8 @@ public class MagazineService {
 
     }
 
+
+
     public void UpdateMagazine(int magazineID){
 
         if(!magazineList.isEmpty()){
