@@ -139,6 +139,7 @@ public class MagazineService {
 
             case 4 -> {
                 System.out.println("Enter Magazine ID to update the Magazine");
+                UpdateMagazine(scanner.nextInt());
 
             }
             case 5 -> {
