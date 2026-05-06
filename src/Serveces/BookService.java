@@ -1,6 +1,7 @@
 package Serveces;
 
 import Entity.Book;
+import Entity.Library;
 import Utils.Constant;
 
 import java.util.ArrayList;
@@ -31,6 +32,9 @@ public class BookService {
         System.out.println("Enter Book version");
         book.setVersion(scanner.nextLine());
 
+        System.out.println("Enter Book publishing house");
+        book.setPublishingHouse(scanner.nextLine());
+
         book.setStatus(false);
 
         return book;
@@ -38,11 +42,10 @@ public class BookService {
 
     public List<Book> AddNewBooks(){
 
-
         Boolean continueFlag = true;
         while (continueFlag) {
 
-            bookList.add(AddNewBook());
+           bookList.add(AddNewBook());
             System.out.println(Constant.BOOK_ADDED_SUCCESSFULLY);
 
             System.out.println(Constant.INPUT_EXIT_CONTINUE_MESSAGE_BOOK);
@@ -53,6 +56,8 @@ public class BookService {
         return bookList;
 
     }
+
+
 
     public void DeleteBook(int bookID){
 
@@ -83,6 +88,9 @@ public class BookService {
 
                 System.out.println("Enter Updated Book version");
                 book.setVersion(scanner.nextLine());
+
+                System.out.println("Enter Updated Book publishing house");
+                book.setPublishingHouse(scanner.nextLine());
 
                 System.out.println(Constant.BOOK_UPDATE_SUCCESSFULLY);
             }

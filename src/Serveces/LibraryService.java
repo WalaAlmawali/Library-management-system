@@ -5,14 +5,15 @@ import Entity.Library;
 import Entity.Magazine;
 import Entity.Member;
 
+import java.util.List;
 import java.util.Scanner;
 
 
 public class LibraryService {
 
-    BookService bookService = new BookService();
     MagazineService magazineService = new MagazineService();
     MemberService memberService = new MemberService();
+    BookService bookService = new BookService();
 
     public static Library libraryInit() {
 
@@ -30,10 +31,12 @@ public class LibraryService {
 
     }
 
+
+
     public void DisplayBooks(){
 
-        for(Book book : bookService.bookList ){
-           bookService.DisplayBook(book.getId());
+        for (Book book : bookService.bookList){
+            bookService.DisplayBook(book.getId());
         }
 
     }

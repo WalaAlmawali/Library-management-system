@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Library {
 
-    private List<Book> bookList ;
+    private List<Book> bookList;
     private List<Magazine> magazinList;
     private List<Member> memberList;
 
