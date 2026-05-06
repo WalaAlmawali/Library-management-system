@@ -32,6 +32,9 @@ public class MagazineService {
         System.out.println("Enter Magazine version");
         magazine.setVersion(scanner.nextLine());
 
+        System.out.println("Enter  Magazine issue number");
+        magazine.setIssueNumber(scanner.nextLine());
+
         magazine.setStatus(false);
 
         return magazine;
@@ -69,6 +72,8 @@ public class MagazineService {
                 System.out.println("magazine statue : " + magazine.isStatus());
                 System.out.println("magazine author : " + magazine.getAuthor());
                 System.out.println("magazine version : " + magazine.getVersion());
+                System.out.println("magazine issue Number : " + magazine.getIssueNumber());
+
 
             }
         }
@@ -107,6 +112,9 @@ public class MagazineService {
 
                     System.out.println("Enter updated Magazine version");
                     magazine.setVersion(scanner.nextLine());
+
+                    System.out.println("Enter updated Magazine issue number");
+                    magazine.setIssueNumber(scanner.nextLine());
 
                     System.out.println(Constant.BOOK_UPDATE_SUCCESSFULLY);
                 }

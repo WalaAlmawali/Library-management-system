@@ -116,6 +116,8 @@ public class BookService {
                 System.out.println("Book statue : " + book.isStatus());
                 System.out.println("Book author : " + book.getAuthor());
                 System.out.println("Book version : " + book.getVersion());
+                System.out.println("Book publishing home : " + book.getPublishingHouse());
+
 
 
             }
