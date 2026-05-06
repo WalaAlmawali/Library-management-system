@@ -5,7 +5,6 @@ import Entity.Library;
 import Entity.Magazine;
 import Entity.Member;
 
-import java.util.List;
 import java.util.Scanner;
 
 
@@ -87,9 +86,6 @@ public class LibraryService {
 
 
 
-
-
-
     public Boolean handleLibraryMenu(Integer libraryOption) {
 
         Scanner scanner = new Scanner(System.in);
@@ -125,7 +121,6 @@ public class LibraryService {
             }case 7 ->{
                 System.out.println("Show Library Information");
                 displayLibrary();
-
             }
             case 8 -> {
                 return false;

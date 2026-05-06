@@ -133,7 +133,7 @@ public class MemberService {
 
         for(Book book : bookService.bookList){
 
-            if(book.getId() == bookID ){
+            if(book.getId() == bookID && !(book.isStatus()) ){
                 book.setStatus(true);
             }
 
@@ -145,7 +145,7 @@ public class MemberService {
 
         for(Book book : bookService.bookList){
 
-            if(book.getId() == bookID ){
+            if(book.getId() == bookID && book.isStatus()){
                 book.setStatus(false);
             }
 
