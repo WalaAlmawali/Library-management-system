@@ -119,7 +119,6 @@ public class BookService {
                 System.out.println("Book publishing home : " + book.getPublishingHouse());
 
 
-
             }
         }
 
